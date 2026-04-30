@@ -62,8 +62,8 @@ const Index = () => {
           <a href="#" className="hover:text-foreground transition-colors">Docs</a>
         </nav>
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-            <Github className="h-4 w-4" /> Star
+          <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <Link to="/login"><Github className="h-4 w-4" /> Star</Link>
           </Button>
           <Button asChild variant="hero" size="sm">
             <Link to="/upload">Launch App <ArrowRight /></Link>
