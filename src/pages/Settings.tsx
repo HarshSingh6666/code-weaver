@@ -20,6 +20,7 @@ import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AuroraBackground } from "@/components/AuroraBackground";
 import { Logo } from "@/components/Logo";
+import { ScrollableNav } from "@/components/ScrollableNav";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
 
