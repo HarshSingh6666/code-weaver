@@ -151,7 +151,11 @@ const SidebarContent = ({ onClose }: { onClose?: () => void }) => {
           <Lock className="h-3 w-3 text-primary" /> 100% offline · zero leak
         </div>
         {user && (
-          <div className="glass rounded-lg p-2.5 flex items-center gap-2.5">
+          <Link
+            to="/profile"
+            onClick={onClose}
+            className="glass rounded-lg p-2.5 flex items-center gap-2.5 hover:border-primary/30 transition-colors"
+          >
             <div className="h-7 w-7 rounded-full bg-gradient-aurora flex items-center justify-center text-[11px] font-bold text-primary-foreground shrink-0">
               {user.name[0].toUpperCase()}
             </div>
@@ -163,14 +167,14 @@ const SidebarContent = ({ onClose }: { onClose?: () => void }) => {
               variant="ghost"
               size="icon"
               className="h-7 w-7 shrink-0"
-              onClick={() => { logout(); toast.success("Signed out"); nav("/"); }}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); logout(); toast.success("Signed out"); nav("/"); }}
             >
               <LogOut className="h-3.5 w-3.5" />
             </Button>
-          </div>
+          </Link>
         )}
-        <Button variant="ghost" size="sm" className="w-full justify-start text-muted-foreground">
-          <Settings /> Settings
+        <Button asChild variant="ghost" size="sm" className="w-full justify-start text-muted-foreground">
+          <Link to="/settings" onClick={onClose}><Settings /> Settings</Link>
         </Button>
       </div>
     </div>
