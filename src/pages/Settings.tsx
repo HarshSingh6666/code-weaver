@@ -121,7 +121,7 @@ const Settings = () => {
         </motion.div>
 
         <Tabs defaultValue="account" className="w-full">
-          <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+          <ScrollableNav className="-mx-4 sm:mx-0 px-4 sm:px-0">
             <TabsList className="glass border border-border/50 inline-flex w-auto">
               <TabsTrigger value="account">Account</TabsTrigger>
               <TabsTrigger value="appearance">Appearance</TabsTrigger>
@@ -129,7 +129,7 @@ const Settings = () => {
               <TabsTrigger value="notifications">Notifications</TabsTrigger>
               <TabsTrigger value="privacy">Privacy</TabsTrigger>
             </TabsList>
-          </div>
+          </ScrollableNav>
 
           <TabsContent value="account" className="mt-5 space-y-5">
             <Section icon={UserIcon} title="Profile" description="How others see you in CodeSage.">
